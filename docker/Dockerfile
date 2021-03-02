@@ -1,7 +1,7 @@
 FROM python:3.8-slim-buster as sdist
 
 LABEL maintainer="oss@netflix.com"
-LABEL org.opencontainers.image.title="Dispatch PyPI Wheel"
+LABEL org.opencontainers.image.title="Dispatch"
 LABEL org.opencontainers.image.description="PyPI Wheel Builder for Dispatch"
 LABEL org.opencontainers.image.url="https://dispatch.io/"
 LABEL org.opencontainers.image.source="https://github.com/netflix/dispatch"
@@ -39,14 +39,14 @@ RUN export YARN_CACHE_FOLDER="$(mktemp -d)" \
 # This is the image to be run
 FROM python:3.8-buster
 
-LABEL maintainer="oss@dispatch.io"
+LABEL maintainer="oss@contractshark.io"
 LABEL org.opencontainers.image.title="Dispatch"
 LABEL org.opencontainers.image.description="Dispatch runtime image"
-LABEL org.opencontainers.image.url="https://github.com/netflix/dispatch"
-LABEL org.opencontainers.image.documentation="https://github.com/netflix/dispatch"
-LABEL org.opencontainers.image.source="https://github.com/netflix/dispatch"
-LABEL org.opencontainers.image.vendor="Netflix, Inc."
-LABEL org.opencontainers.image.authors="oss@netflix.com"
+LABEL org.opencontainers.image.url="https://github.com/contractshark/dispatch"
+LABEL org.opencontainers.image.documentation="https://github.com/contractshark/dispatch"
+LABEL org.opencontainers.image.source="https://github.com/contractshark/dispatch"
+LABEL org.opencontainers.image.vendor="Manifold Finance"
+LABEL org.opencontainers.image.authors="janitor@contractshark.io"
 
 
 # add our user and group first to make sure their IDs get assigned consistently
